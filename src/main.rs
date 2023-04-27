@@ -4,7 +4,7 @@ use std::{
 };
 fn main() {
     let listener = 
-    TcpListener::bind("127.0.0.1:7878").unwrap();
+    TcpListener::bind("127.0.0.1:7878").unwrap(); //bei 0.0.0.0 wird ans internet gehosted
 
     for stream in listener.incoming() {
         let stream = stream.unwrap();
